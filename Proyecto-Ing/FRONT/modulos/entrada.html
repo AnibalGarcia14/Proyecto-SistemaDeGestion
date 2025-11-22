@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <title>Módulo Entrada - Sistema de Gestión</title>
+  <link rel="stylesheet" href="/FRONT/css/entrada.css">
+
+</head>
+<body>
+
+  <header>Sistema de Gestión - Módulo Entrada</header>
+
+  <nav>
+    <button class="tab active" data-target="productos">Productos</button>
+    <button class="tab" data-target="inventario">Inventario</button>
+    <button class="tab" data-target="ventas">Ventas</button>
+    <button class="tab" data-target="clientes">Clientes</button>
+  </nav>
+
+  <!-- Productos -->
+  <section id="productos" class="section active-section">
+    <h2>Registro de Productos</h2>
+    <form id="form-productos">
+      <input type="text" placeholder="Nombre del producto" required>
+      <input type="text" placeholder="Código">
+      <input type="text" placeholder="Categoría">
+      <input type="number" placeholder="Precio">
+      <input type="text" placeholder="Unidad de medida">
+      <button class="submit" type="submit">Registrar producto</button>
+    </form>
+
+    <table>
+      <tr><th>Nombre</th><th>Código</th><th>Categoría</th><th>Precio</th><th>Unidad</th></tr>
+      <tr><td>Ejemplo 1</td><td>001</td><td>Bebidas</td><td>$10</td><td>Litro</td></tr>
+    </table>
+  </section>
+
+  <!-- Inventario -->
+  <section id="inventario" class="section">
+    <h2>Control de Inventario</h2>
+    <table>
+      <tr><th>Producto</th><th>Cantidad Disponible</th><th>Entradas</th><th>Salidas</th><th>Nivel Mínimo</th></tr>
+      <tr><td>Ejemplo 1</td><td>50</td><td>100</td><td>50</td><td>20</td></tr>
+    </table>
+  </section>
+
+  <!-- Ventas -->
+  <section id="ventas" class="section">
+    <h2>Registro de Ventas</h2>
+    <form id="form-ventas">
+      <input type="date" required>
+      <input type="text" placeholder="Producto vendido" required>
+      <input type="number" placeholder="Cantidad" required>
+      <input type="number" placeholder="Precio total" required>
+      <button class="submit" type="submit">Registrar venta</button>
+    </form>
+
+    <table>
+      <tr><th>Fecha</th><th>Producto</th><th>Cantidad</th><th>Total</th></tr>
+      <tr><td>2025-11-07</td><td>Ejemplo 1</td><td>2</td><td>$20</td></tr>
+    </table>
+  </section>
+
+  <!-- Clientes -->
+  <section id="clientes" class="section">
+    <h2>Gestión de Clientes</h2>
+    <form id="form-clientes">
+      <input type="text" placeholder="Nombre del cliente" required>
+      <input type="email" placeholder="Correo electrónico">
+      <input type="text" placeholder="Teléfono">
+      <button class="submit" type="submit">Guardar cliente</button>
+    </form>
+
+    <table>
+      <tr><th>Nombre</th><th>Correo</th><th>Teléfono</th><th>Historial</th></tr>
+      <tr><td>Cliente Ejemplo</td><td>cliente@correo.com</td><td>555-1234</td><td>3 compras</td></tr>
+    </table>
+  </section>
+
+  <script src="/FRONT/js/entrada.js" ></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+}
+
+header {
+    background: #1A237E;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+nav {
+    background: #283593;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding: 10px;
+}
+
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav button.active, nav button:hover {
+    background: #3949AB;
+}
+
+.section {
+    display: none;
+    padding: 20px;
+}
+
+.active-section {
+    display: block;
+    background: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #E8EAF6;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.card {
+    background: #E3F2FD;
+    padding: 20px;
+    border-radius: 6px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.btn {
+    background: #1E88E5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #1565C0;
+}
+
+.filters {
+    margin-bottom: 15px;
+}
+
+.filters input, .filters select {
+    padding: 8px;
+    margin-right: 10px;
+}

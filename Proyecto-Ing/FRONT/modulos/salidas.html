@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo Salidas - Sistema de Gestión</title>
+  <link rel="stylesheet" href="/FRONT/css/salidas.css">
+</head>
+<body>
+
+  <header>Sistema de Gestión - Módulo: Salidas</header>
+
+  <nav>
+    <button class="tab active" data-target="informes">Informes Digitales</button>
+    <button class="tab" data-target="alertas">Alertas Automáticas</button>
+    <button class="tab" data-target="estadisticas">Estadísticas</button>
+    <button class="tab" data-target="control">Sistema de Control</button>
+  </nav>
+
+  <!-- INFORMES DIGITALES -->
+  <section id="informes" class="section active-section">
+    <h2>Informes Digitales</h2>
+    <p>Reportes descargables en formato digital sobre ventas, inventario y finanzas.</p>
+
+    <table>
+      <tr><th>Tipo de Informe</th><th>Periodo</th><th>Fecha Generación</th><th>Formato</th><th>Acción</th></tr>
+      <tr><td>Ventas</td><td>Semanal</td><td>2025-11-07</td><td>PDF</td><td><button class="btn">Descargar</button></td></tr>
+      <tr><td>Inventario</td><td>Mensual</td><td>2025-11-01</td><td>Excel</td><td><button class="btn">Descargar</button></td></tr>
+      <tr><td>Finanzas</td><td>Diario</td><td>2025-11-07</td><td>PDF</td><td><button class="btn">Descargar</button></td></tr>
+    </table>
+  </section>
+
+  <!-- ALERTAS AUTOMÁTICAS -->
+  <section id="alertas" class="section">
+    <h2>Alertas Automáticas</h2>
+    <p>Notificaciones del sistema sobre bajo stock, vencimientos o irregularidades financieras.</p>
+
+    <div class="alert warning"> ⚠️ El producto "Agua Mineral" está por debajo del nivel mínimo de stock.</div>
+    <div class="alert error"> ❌ Se detectó una irregularidad en los registros de ventas del 05/11/2025.</div>
+    <div class="alert success"> ✅ Respaldo de datos completado exitosamente el 06/11/2025.</div>
+
+    <div class="control-buttons">
+      <button class="btn">Ver historial de alertas</button>
+      <button class="btn">Configurar notificaciones</button>
+    </div>
+  </section>
+
+  <!-- ESTADÍSTICAS -->
+  <section id="estadisticas" class="section">
+    <h2>Estadísticas Visuales</h2>
+    <p>Transforma la información numérica en gráficos para análisis comparativo.</p>
+
+    <div class="chart-container">
+      <div class="chart">📊 Ventas</div>
+      <div class="chart">📈 Ingresos</div>
+      <div class="chart">📦 Inventario</div>
+    </div>
+
+    <div class="control-buttons">
+      <button class="btn">Actualizar Gráficos</button>
+      <button class="btn">Exportar Imagen</button>
+    </div>
+  </section>
+
+  <!-- SISTEMA DE CONTROL -->
+  <section id="control" class="section">
+    <h2>Sistema de Control</h2>
+    <p>Funciones internas que mantienen la integridad y seguridad del sistema.</p>
+
+    <table>
+      <tr><th>Módulo</th><th>Descripción</th><th>Acción</th></tr>
+      <tr><td>Validaciones</td><td>Verifica que los datos ingresados sean correctos.</td><td><button class="btn">Ejecutar validación</button></td></tr>
+      <tr><td>Copias de seguridad</td><td>Guarda versiones en la nube para evitar pérdidas de datos.</td><td><button class="btn">Respaldar ahora</button></td></tr>
+      <tr><td>Acceso restringido</td><td>Controla qué usuarios pueden modificar información.</td><td><button class="btn">Ver permisos</button></td></tr>
+      <tr><td>Feedback</td><td>Permite enviar sugerencias o reportar fallos del sistema.</td><td><button class="btn">Enviar feedback</button></td></tr>
+      <tr><td>Mantenimiento</td><td>Detecta y corrige errores o caídas del sistema.</td><td><button class="btn">Iniciar revisión</button></td></tr>
+    </table>
+  </section>
+
+  <script src="/FRONT/js/salidas.js" ></script>
+
+</body>
+</html>

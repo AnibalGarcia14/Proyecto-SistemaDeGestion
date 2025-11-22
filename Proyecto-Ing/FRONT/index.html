@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Administrativo - Sistema de Gestión</title>
+
+  <style>
+    /* ======= ESTILOS GLOBALES ======= */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      background: #f4f6f9;
+    }
+
+    /* ======= MENÚ LATERAL ======= */
+    aside {
+      width: 260px;
+      background: #263238;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .menu button {
+      background: none;
+      border: none;
+      color: white;
+      text-align: left;
+      padding: 15px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .menu button:hover,
+    .menu button.active {
+      background: #37474F;
+    }
+
+    /* ======= CONTENEDOR PRINCIPAL ======= */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #1976D2;
+      color: white;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .user-info {
+      font-size: 0.9em;
+    }
+
+    /* ======= SECCIONES ======= */
+    .section {
+      display: none;
+      padding: 20px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .active-section {
+      display: block;
+    }
+
+    h2 {
+      color: #333;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    /* ======= TABLAS Y FORMULARIOS ======= */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #ECEFF1;
+    }
+
+    input, select, textarea {
+      padding: 8px;
+      margin: 5px;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      width: 250px;
+    }
+
+    .btn {
+      background: #1976D2;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #0D47A1;
+    }
+
+    .card-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #E3F2FD;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1;
+      min-width: 220px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .alert {
+      padding: 10px;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+
+    .alert.success { background: #E8F5E9; border-left: 6px solid #4CAF50; }
+    .alert.warning { background: #FFF3E0; border-left: 6px solid #FF9800; }
+    .alert.error { background: #FFEBEE; border-left: 6px solid #F44336; }
+
+  </style>
+</head>
+
+<body>
+  <!-- MENÚ LATERAL -->
+  <aside>
+    <div class="logo">🧭 Gestión</div>
+    <div class="menu">
+      <button class="menu-btn active" data-target="entrada">📥 Entrada</button>
+      <button class="menu-btn" data-target="procesos">⚙️ Procesos</button>
+      <button class="menu-btn" data-target="salidas">📤 Salidas</button>
+      <button class="menu-btn" data-target="control">🧰 Sistema de Control</button>
+    </div>
+  </aside>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <header>
+      <div>Panel Administrativo - Sistema de Gestión</div>
+      <div class="user-info">👤 Admin | Cerrar sesión</div>
+    </header>
+
+    <!-- MÓDULO 1: ENTRADA -->
+    <section id="entrada" class="section active-section">
+      <h2>Módulo 1: Entrada</h2>
+      <p>Registro y gestión de información inicial del sistema.</p>
+
+      <h3>Productos</h3>
+      <table>
+        <tr><th>Nombre</th><th>Categoría</th><th>Precio</th></tr>
+        <tr><td>Producto A</td><td>Bebidas</td><td>$10</td></tr>
+      </table>
+
+      <h3>Inventario</h3>
+      <table>
+        <tr><th>Producto</th><th>Cantidad</th><th>Estado</th></tr>
+        <tr><td>Agua</td><td>50</td><td>Normal</td></tr>
+      </table>
+
+      <h3>Ventas</h3>
+      <table>
+        <tr><th>Fecha</th><th>Producto</th><th>Total</th></tr>
+        <tr><td>2025-11-07</td><td>Bebida</td><td>$20</td></tr>
+      </table>
+
+      <h3>Clientes</h3>
+      <table>
+        <tr><th>Nombre</th><th>Correo</th></tr>
+        <tr><td>Juan Pérez</td><td>juan@correo.com</td></tr>
+      </table>
+    </section>
+
+    <!-- MÓDULO 2: PROCESOS -->
+    <section id="procesos" class="section">
+      <h2>Módulo 2: Procesos del Sistema</h2>
+      <p>Analiza y transforma la información de entrada.</p>
+
+      <h3>Gestión del Inventario</h3>
+      <div class="card-container">
+        <div class="card">🧮 Stock bajo: 5 productos</div>
+        <div class="card">📦 Total productos: 120</div>
+        <div class="card">🏬 Almacenes activos: 3</div>
+      </div>
+
+      <h3>Control Financiero</h3>
+      <table>
+        <tr><th>Fecha</th><th>Descripción</th><th>Tipo</th><th>Monto</th></tr>
+        <tr><td>2025-11-07</td><td>Venta producto A</td><td>Ingreso</td><td>$500</td></tr>
+      </table>
+
+      <h3>Reportes</h3>
+      <p>Generación de reportes automáticos.</p>
+      <button class="btn">Generar Reporte</button>
+    </section>
+
+    <!-- MÓDULO 3: SALIDAS -->
+    <section id="salidas" class="section">
+      <h2>Módulo 3: Salidas</h2>
+      <p>Presentación de resultados, informes y estadísticas.</p>
+
+      <h3>Informes Digitales</h3>
+      <table>
+        <tr><th>Tipo</th><th>Periodo</th><th>Acción</th></tr>
+        <tr><td>Ventas</td><td>Semanal</td><td><button class="btn">Descargar</button></td></tr>
+      </table>
+
+      <h3>Alertas Automáticas</h3>
+      <div class="alert warning">⚠️ Producto “Bebida A” con bajo stock.</div>
+      <div class="alert success">✅ Copia de seguridad realizada con éxito.</div>
+
+      <h3>Estadísticas</h3>
+      <div class="card-container">
+        <div class="card">📈 Ventas Semanales</div>
+        <div class="card">💰 Ganancias Mensuales</div>
+        <div class="card">📊 Inventario Activo</div>
+      </div>
+    </section>
+
+    <!-- MÓDULO 4: SISTEMA DE CONTROL -->
+    <section id="control" class="section">
+      <h2>Módulo 4: Sistema de Control</h2>
+      <p>Gestión de validaciones, seguridad, mantenimiento y feedback.</p>
+
+      <h3>Validaciones</h3>
+      <div class="alert success">✅ Datos validados correctamente.</div>
+
+      <h3>Copias de Seguridad</h3>
+      <table>
+        <tr><th>Fecha</th><th>Tipo</th><th>Estado</th></tr>
+        <tr><td>2025-11-07</td><td>Completo</td><td>Completado</td></tr>
+      </table>
+
+      <h3>Acceso Restringido</h3>
+      <table>
+        <tr><th>Usuario</th><th>Rol</th><th>Permisos</th></tr>
+        <tr><td>Admin</td><td>Administrador</td><td>Total</td></tr>
+      </table>
+
+      <h3>Feedback</h3>
+      <textarea placeholder="Escribe tu sugerencia..." rows="3"></textarea><br>
+      <button class="btn">Enviar feedback</button>
+
+      <h3>Mantenimiento</h3>
+      <div class="alert error">❌ Error detectado: desincronización de inventario.</div>
+      <button class="btn">Ejecutar diagnóstico</button>
+    </section>
+  </main>
+
+  <script>
+    // Control de navegación lateral
+    const menuButtons = document.querySelectorAll(".menu-btn");
+    const sections = document.querySelectorAll(".section");
+
+    menuButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        menuButtons.forEach(b => b.classList.remove("active"));
+        sections.forEach(s => s.classList.remove("active-section"));
+        btn.classList.add("active");
+        document.getElementById(btn.dataset.target).classList.add("active-section");
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo Procesos de Sistemas</title>
+  <link rel="stylesheet" href="/FRONT/css/procesosdelsistema.css">
+</head>
+<body>
+
+  <header>Sistema de Gestión - Módulo: Procesos de Sistemas</header>
+
+  <nav>
+    <button class="tab active" data-target="gestion-inventario">Gestión del Inventario</button>
+    <button class="tab" data-target="control-financiero">Control Financiero</button>
+    <button class="tab" data-target="reportes">Reportes</button>
+  </nav>
+
+  <!-- Gestión del Inventario -->
+  <section id="gestion-inventario" class="section active-section">
+    <h2>Gestión del Inventario</h2>
+    <p>Administra la cantidad, ubicación y movimientos de productos. Actualiza niveles automáticamente según ventas.</p>
+
+    <div class="filters">
+      <input type="text" placeholder="Buscar producto...">
+      <select>
+        <option>Todos</option>
+        <option>Bajo stock</option>
+        <option>Normal</option>
+        <option>Excedente</option>
+      </select>
+      <button class="btn">Filtrar</button>
+    </div>
+
+    <table>
+      <tr><th>Producto</th><th>Cantidad</th><th>Ubicación</th><th>Estado</th><th>Última actualización</th></tr>
+      <tr><td>Bebida Energética</td><td>20</td><td>Almacén A</td><td>Bajo stock</td><td>2025-11-07</td></tr>
+      <tr><td>Agua Mineral</td><td>150</td><td>Almacén B</td><td>Normal</td><td>2025-11-06</td></tr>
+    </table>
+  </section>
+
+  <!-- Control Financiero -->
+  <section id="control-financiero" class="section">
+    <h2>Control Financiero</h2>
+    <p>Calcula ingresos, egresos y flujo de caja del negocio.</p>
+
+    <div class="stats">
+      <div class="card">
+        <h3>Ingresos</h3>
+        <p>$12,500</p>
+      </div>
+      <div class="card">
+        <h3>Egresos</h3>
+        <p>$4,300</p>
+      </div>
+      <div class="card">
+        <h3>Ganancia Neta</h3>
+        <p>$8,200</p>
+      </div>
+    </div>
+
+    <table>
+      <tr><th>Fecha</th><th>Descripción</th><th>Tipo</th><th>Monto</th></tr>
+      <tr><td>2025-11-07</td><td>Venta producto A</td><td>Ingreso</td><td>$500</td></tr>
+      <tr><td>2025-11-06</td><td>Compra de insumos</td><td>Egreso</td><td>$150</td></tr>
+    </table>
+
+    <button class="btn">Generar Resumen Diario</button>
+  </section>
+
+  <!-- Reportes -->
+  <section id="reportes" class="section">
+    <h2>Reportes</h2>
+    <p>Genera informes de ventas, stock y finanzas con distintos intervalos.</p>
+
+    <div class="filters">
+      <label>Periodo:</label>
+      <select>
+        <option>Diario</option>
+        <option>Semanal</option>
+        <option>Mensual</option>
+      </select>
+      <button class="btn">Generar Reporte</button>
+    </div>
+
+    <table>
+      <tr><th>Tipo de reporte</th><th>Fecha de generación</th><th>Estado</th><th>Descargar</th></tr>
+      <tr><td>Ventas Semanales</td><td>2025-11-07</td><td>Completado</td><td><button class="btn">Descargar PDF</button></td></tr>
+      <tr><td>Inventario Mensual</td><td>2025-11-01</td><td>Completado</td><td><button class="btn">Descargar PDF</button></td></tr>
+    </table>
+  </section>
+
+  <script src="/FRONT/js/procesosdelsistema.js" ></script>
+
+</body>
+</html>

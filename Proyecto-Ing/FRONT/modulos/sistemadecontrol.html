@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo Sistema de Control - Sistema de Gestión</title>
+  <link rel="stylesheet" href="/FRONT/css/sistemadecontrol.css">
+</head>
+<body>
+
+  <header>Sistema de Gestión - Módulo: Sistema de Control</header>
+
+  <nav>
+    <button class="tab active" data-target="validaciones">Validaciones</button>
+    <button class="tab" data-target="copias">Copias de Seguridad</button>
+    <button class="tab" data-target="acceso">Acceso Restringido</button>
+    <button class="tab" data-target="feedback">Feedback</button>
+    <button class="tab" data-target="mantenimiento">Mantenimiento</button>
+  </nav>
+
+  <!-- VALIDACIONES -->
+  <section id="validaciones" class="section active-section">
+    <h2>Validaciones de Datos</h2>
+    <p>Verifica que los datos ingresados en el sistema sean correctos y completos antes del procesamiento.</p>
+
+    <div class="form-control">
+      <label>Seleccionar módulo a validar:</label>
+      <select>
+        <option>Productos</option>
+        <option>Ventas</option>
+        <option>Inventario</option>
+        <option>Finanzas</option>
+      </select>
+    </div>
+
+    <button class="btn">Ejecutar validación</button>
+
+    <div class="alert success">✅ Todos los datos de Inventario han sido validados correctamente.</div>
+    <div class="alert warning">⚠️ Se encontraron datos incompletos en el módulo de Ventas.</div>
+  </section>
+
+  <!-- COPIAS DE SEGURIDAD -->
+  <section id="copias" class="section">
+    <h2>Copias de Seguridad</h2>
+    <p>Guarda versiones de la información en la nube para evitar pérdida de datos.</p>
+
+    <div class="form-control">
+      <label>Seleccionar tipo de respaldo:</label>
+      <select>
+        <option>Completo</option>
+        <option>Incremental</option>
+        <option>Solo base de datos</option>
+      </select>
+    </div>
+
+    <button class="btn">Iniciar respaldo</button>
+
+    <table>
+      <tr><th>Fecha</th><th>Tipo</th><th>Ubicación</th><th>Estado</th></tr>
+      <tr><td>2025-11-07</td><td>Completo</td><td>Nube AWS</td><td>Completado</td></tr>
+      <tr><td>2025-11-05</td><td>Incremental</td><td>Servidor Local</td><td>Completado</td></tr>
+    </table>
+  </section>
+
+  <!-- ACCESO RESTRINGIDO -->
+  <section id="acceso" class="section">
+    <h2>Acceso Restringido</h2>
+    <p>Controla qué usuarios pueden ingresar o modificar información dentro del sistema.</p>
+
+    <table>
+      <tr><th>Usuario</th><th>Rol</th><th>Permisos</th><th>Estado</th></tr>
+      <tr><td>Administrador</td><td>Admin</td><td>Total</td><td>Activo</td></tr>
+      <tr><td>Vendedor 1</td><td>Ventas</td><td>Lectura / Escritura</td><td>Activo</td></tr>
+      <tr><td>Auditor</td><td>Finanzas</td><td>Solo lectura</td><td>Inactivo</td></tr>
+    </table>
+
+    <div class="form-control">
+      <label>Modificar rol o permisos:</label>
+      <input type="text" placeholder="Nombre de usuario">
+      <select>
+        <option>Lectura</option>
+        <option>Escritura</option>
+        <option>Administrador</option>
+      </select>
+    </div>
+
+    <button class="btn">Actualizar permisos</button>
+  </section>
+
+  <!-- FEEDBACK -->
+  <section id="feedback" class="section">
+    <h2>Feedback del Usuario</h2>
+    <p>Permite a los usuarios reportar fallos o enviar sugerencias sobre el funcionamiento del sistema.</p>
+
+    <div class="form-control">
+      <label>Tipo de mensaje:</label>
+      <select>
+        <option>Sugerencia</option>
+        <option>Error técnico</option>
+        <option>Mejora solicitada</option>
+      </select>
+    </div>
+
+    <div class="form-control">
+      <label>Mensaje:</label>
+      <textarea rows="4" placeholder="Describe tu sugerencia o error..."></textarea>
+    </div>
+
+    <button class="btn">Enviar feedback</button>
+
+    <div class="alert success">✅ Tu mensaje fue enviado con éxito. ¡Gracias por tus comentarios!</div>
+  </section>
+
+  <!-- MANTENIMIENTO -->
+  <section id="mantenimiento" class="section">
+    <h2>Mantenimiento del Sistema</h2>
+    <p>Detecta, documenta y corrige errores o caídas del sistema.</p>
+
+    <table>
+      <tr><th>ID</th><th>Descripción</th><th>Estado</th><th>Fecha detección</th></tr>
+      <tr><td>ERR-001</td><td>Error en carga de reportes</td><td>Resuelto</td><td>2025-11-05</td></tr>
+      <tr><td>ERR-002</td><td>Desincronización de inventario</td><td>En proceso</td><td>2025-11-07</td></tr>
+    </table>
+
+    <div class="control-buttons" style="margin-top:15px;">
+      <button class="btn">Ejecutar diagnóstico</button>
+      <button class="btn">Ver logs del sistema</button>
+    </div>
+  </section>
+
+<script src="/FRONT/js/sistemadecontrol.js" ></script>
+
+</body>
+</html>
